@@ -24,7 +24,10 @@ namespace lunar
         void Destroy();
         ivec2 GetSize() const;
         const char* GetTitle() const;
+        inline bool ShouldClose() const { return m_ShouldClose; }
+        inline SDL_Window* GetNativeWindow() const { return m_Window; }
     private:
         SDL_Window* m_Window = nullptr;
+        bool m_ShouldClose = false;
     };
 }

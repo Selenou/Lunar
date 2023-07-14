@@ -11,8 +11,11 @@ target_sources(lunar PRIVATE
  "core/window.cpp"
  "core/window.h"
  "maths/vector.h"
+  "rendering/renderer.cpp"
+ "rendering/renderer.h"
  "tools/editor.cpp"
- "tools/editor.h")
+ "tools/editor.h"
+ "tools/imguibuild.cpp")
 
 # link libs (sdl3, imgui)
 target_link_libraries(lunar PRIVATE SDL3::SDL3 imgui)

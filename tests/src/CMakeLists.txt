@@ -3,9 +3,10 @@ add_executable(lunartests)
 target_include_directories(lunartests PRIVATE "${LUNAR_ROOT}/engine/src")
 
 target_sources(lunartests PRIVATE
+"core/loggertest.cpp"
 "core/windowtest.cpp"
 "maths/vectortest.cpp"
-"core/loggertest.cpp")
+"playground.cpp")
 
 target_link_libraries(lunartests PRIVATE lunar Catch2::Catch2WithMain)
 

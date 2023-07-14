@@ -4,13 +4,21 @@
 TEST_CASE("Window")
 {
     lunar::Window window;
-    window.Init({.Width = 640, .Height = 480, .Title = "WindowTest" });
+    constexpr i32 width = 640;
+    constexpr i32 height = 640;
 
-    SECTION("WindowProperties are properly used") 
+    window.Init({ .Width = width, .Height = height, .Title = "WindowTest" });
+
+    SECTION("WindowProperties are properly used")
     {
-        const ivec2 size = window.GetSize();
-        REQUIRE(size.x == 640);
-        REQUIRE(size.y == 480);
+        REQUIRE(window.GetSize() == ivec2(width, height));
         REQUIRE(strcmp(window.GetTitle(), "WindowTest") == 0);
+    }
+
+    window.Destroy();
+
+    SECTION("Window is properly destroyed")
+    {
+        REQUIRE(window.GetNativeWindow() == nullptr);
     }
 }
