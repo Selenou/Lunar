@@ -1,23 +1,17 @@
 ﻿{
   "configurations": [
     {
-      "name": "x64-Clang-Debug",
+      "name": "lunar-debug",
       "generator": "Ninja",
       "configurationType": "Debug",
       "buildRoot": "${projectDir}\\build\\${name}",
-      "cmakeCommandArgs": "",
-      "buildCommandArgs": "",
-      "ctestCommandArgs": "",
       "inheritEnvironments": [ "clang_cl_x64_x64" ]
     },
     {
-      "name": "x64-Clang-Release",
+      "name": "lunar-release",
       "generator": "Ninja",
       "configurationType": "Release",
       "buildRoot": "${projectDir}\\build\\${name}",
-      "cmakeCommandArgs": "",
-      "buildCommandArgs": "",
-      "ctestCommandArgs": "",
       "inheritEnvironments": [ "clang_cl_x64_x64" ]
     }
   ]

@@ -1,9 +1,11 @@
 #pragma once
 
-#include <core/assert.h>
-#include <core/core.h>
-#include <core/logger.h>
-#include <core/window.h>
-#include <maths/vector.h>
-#include <rendering/renderer.h>
-#include <tools/editor.h>
+#include <lunar/core/assert.h>
+#include <lunar/core/core.h>
+#include <lunar/core/logger.h>
+#include <lunar/maths/vector.h>
+#include <lunar/graphics/window.h>
+#include <lunar/tools/editor.h>
+
+//TODO : TMP
+#include <platforms/sdl/renderer.h>

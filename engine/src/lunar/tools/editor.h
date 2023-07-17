@@ -1,10 +1,8 @@
 #pragma once
 
-#include "core/core.h"
-
-struct SDL_Window;
 struct SDL_Renderer;
 
+#ifdef LUNAR_DEV
 namespace lunar
 {
     class Editor
@@ -12,10 +10,11 @@ namespace lunar
     public:
         Editor() = default;
         ~Editor() = default;
-        void Init(SDL_Window* window, SDL_Renderer* renderer);
+        void Init(void* window, SDL_Renderer* renderer);
         void Destroy();
         void NewFrame();
         void EndFrame();
         void Render();
     };
 }
+#endif

@@ -1,15 +1,11 @@
 #pragma once
 
-#include "core/assert.h"
-
 template<typename T>
 struct Vector2D
 {
     T x, y;
     Vector2D() : x(0), y(0) {}
     Vector2D(T x, T y) : x(x), y(y) {}
-    inline T& operator [](int i) { LUNAR_ASSERT(i < 2, "Invalid index"); return (&x)[i]; }
-    inline const T& operator [](int i) const { LUNAR_ASSERT(i < 2, "Invalid index"); return (&x)[i]; }
     inline bool operator == (const Vector2D& v) const { return (x == v.x) && (y == v.y); }
     inline bool operator != (const Vector2D& v) const { return (x != v.x) || (y != v.y); }
 };

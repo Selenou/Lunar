@@ -1,12 +1,15 @@
 #include "lunarpch.h"
 #include "editor.h"
+#ifdef LUNAR_DEV
 #include <imgui.h>
 #include <backends/imgui_impl_sdl3.h>
 #include <backends/imgui_impl_sdlrenderer3.h>
+#endif
 
+#ifdef LUNAR_DEV
 namespace lunar
 {
-    void Editor::Init(SDL_Window* window, SDL_Renderer* renderer)
+    void Editor::Init(void* window, SDL_Renderer* renderer)
     {
         IMGUI_CHECKVERSION();
         ImGui::CreateContext();
@@ -18,7 +21,7 @@ namespace lunar
         //io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;			// Enable Docking
         //io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;		// Enable Multi-Viewport / Platform Windows
 
-        ImGui_ImplSDL3_InitForSDLRenderer(window, renderer);
+        ImGui_ImplSDL3_InitForSDLRenderer(static_cast<SDL_Window*>(window), renderer);
         ImGui_ImplSDLRenderer3_Init(renderer);
     }
 
@@ -62,3 +65,4 @@ namespace lunar
         }
     }
 }
+#endif

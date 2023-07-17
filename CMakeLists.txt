@@ -14,6 +14,5 @@ add_subdirectory(engine)
 add_subdirectory(vendor)
 
 # Tests
-#set_property(GLOBAL PROPERTY CTEST_TARGETS_ADDED 1) # will hide generated CTest targets
 include(CTest) # required for automatic test registration (Test Explorer VS22), at root level
 add_subdirectory(tests)

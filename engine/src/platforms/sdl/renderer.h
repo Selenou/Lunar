@@ -1,10 +1,9 @@
 #pragma once
 
-#include "core/core.h"
-#include "maths/vector.h"
+#include "lunar/core/core.h"
+#include "lunar/maths/vector.h"
 
 struct SDL_Renderer;
-struct SDL_Window;
 
 namespace lunar
 {
@@ -13,7 +12,7 @@ namespace lunar
     public:
         Renderer() = default;
         ~Renderer() = default;
-        void Init(SDL_Window* window);
+        void Init(void* window);
         void Destroy();
         void Clear();
         void Present();

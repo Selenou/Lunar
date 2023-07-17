@@ -6,7 +6,8 @@
 #include <sstream>
 #include <string>
 
-#ifdef LUNAR_DEBUG
+// Disable logging only if LUNAR_FASTLOAD && LUNAR_RELEASE
+#if defined LUNAR_DEV || defined LUNAR_DEBUG
 #define LUNAR_LOGGING_ENABLED
 #endif
 

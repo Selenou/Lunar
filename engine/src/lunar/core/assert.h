@@ -3,7 +3,8 @@
 #include "core.h"
 #include "logger.h"
 
-#ifdef LUNAR_DEBUG
+// Disable assertions only if LUNAR_FASTLOAD && LUNAR_RELEASE
+#if defined LUNAR_DEV || defined LUNAR_DEBUG
 #define LUNAR_ASSERTIONS_ENABLED
 #endif
 

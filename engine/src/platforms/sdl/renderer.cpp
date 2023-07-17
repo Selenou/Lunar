@@ -4,9 +4,9 @@
 
 namespace lunar
 {
-    void Renderer::Init(SDL_Window* window)
+    void Renderer::Init(void* window)
     {
-        m_Renderer = SDL_CreateRenderer(window, nullptr, SDL_RENDERER_ACCELERATED);
+        m_Renderer = SDL_CreateRenderer(static_cast<SDL_Window*>(window), nullptr, SDL_RENDERER_ACCELERATED);
     }
 
     void Renderer::Destroy()
